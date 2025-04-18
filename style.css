@@ -120,11 +120,50 @@ header {
     opacity: 0.9;
 }
 
-/* Formulario del Cuestionario */
-.questionnaire-section {
-    padding: 60px 0;
+/* Estilos para el nuevo título persuasivo */
+.text-center {
+    text-align: center;
 }
 
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff5757;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* Espacio adicional para el contenido principal sin navbar */
+.questionnaire-section {
+    padding: 60px 0;
+    min-height: calc(100vh - 100px);
+}
+
+/* Ajustar espacio para la primera pregunta */
+.question-page.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Formulario del Cuestionario */
 .progress-container {
     margin-bottom: 30px;
     background-color: #f1f1f1;
@@ -151,15 +190,6 @@ header {
 
 .question-page {
     display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease;
-}
-
-.question-page.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .question-card {
