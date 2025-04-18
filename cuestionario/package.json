@@ -1,0 +1,32 @@
+{
+  "name": "adelgaza-sin-salir-de-casa-cuestionario",
+  "version": "1.0.0",
+  "description": "Cuestionario para conocer al cliente ideal para el programa Adelgaza sin Salir de Casa",
+  "main": "script.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-report-service": "node schedule-report.js",
+    "generate-report": "node -e \"require('./weekly-report').generateAndSendReport().then(console.log).catch(console.error)\""
+  },
+  "keywords": [
+    "adelgazamiento",
+    "cuestionario",
+    "marketing",
+    "landing",
+    "cliente ideal"
+  ],
+  "author": "SPMarketing - ImpactoDigital",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.3",
+    "dotenv": "^16.3.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
